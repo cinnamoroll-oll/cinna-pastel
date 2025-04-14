@@ -15,9 +15,9 @@ A soft and dreamy pastel theme for Discord, perfect for a cozy, kawaii aesthetic
 📥 Installation
 Make sure you have Vencord installed.
 
-Go to Settings > Vencord > Plugins > Custom CSS.
+Go to Settings > Vencord > Themes > Open Themes Folder.
 
-Install the css file named -   cinnamoroll-pastel
+Install the css file named -   cinnamoroll-pastel   and put it into the folder!<3
 
 Save and enjoy your aesthetic pastel Discord ✨
 
