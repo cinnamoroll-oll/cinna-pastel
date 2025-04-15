@@ -1,0 +1,658 @@
+:root {
+  /*Dark mode*/
+ 
+  --dark-layer1: 141, 208, 247;
+  --dark-flyout: rgb(252, 224, 231);
+  --dark-select: 255,255,255;
+  --dark-accent: rgb(76, 194, 255);
+  --dark-accent-hovered: rgb(65, 163, 214); /*also disabled button*/
+  --dark-accent-font-color: black;
+  --dark-button: rgb(190, 220, 250);
+  --dark-button-border: rgb(60, 60, 60);
+  --dark-button-font-color: white;
+  --dark-dm-about: rgba(255, 255, 255);
+  --dark-background-accent: rgba(255, 255, 255);
+
+  /*Light mode*/
+
+  --light-layer1: rgb(141, 208, 247);
+  --light-flyout: rgb(252, 224, 231);
+  --light-select: 0,0,0;
+  --light-accent: rgb(253, 205, 218);
+  --light-accent-hovered: rgb(228, 212, 255); /*also disabled button*/
+  --light-accent-font-color: rgb(0, 0, 0);
+  --light-button: rgb(190, 220, 250);
+  --light-button-border: rgb(0, 0, 0);
+  --light-button-font-color: rgb(0, 0, 0);
+  --light-dm-about: rgb(255, 255, 255);
+  --light-background-accent: rgb(255, 255, 255);
+  
+  /* Titlebar */
+  --custom-app-top-bar-height: calc(24px + var(--space-sm)); 
+  --title-bar-icon: flex;
+}
+
+.visual-refresh.theme-dark { 
+  --app-bg: var(--dark-bg);
+  
+  /*Layer 1*/
+  --background-primary: rgba(var(--dark-layer1),0.05); /* Activity Card Empty */
+  --background-surface-high: rgba(var(--dark-layer1),0.05); /* Activity Card */
+  --background-base-low: rgba(var(--dark-layer1),0.05); /* Follow channel */
+  --background-secondary-alt: rgba(var(--dark-layer1),0.05);
+  --input-background: rgba(var(--dark-layer1),0.05);
+  --background-secondary: rgba(var(--dark-layer1),0.05);
+  --background-tertiary: rgba(var(--dark-layer1),0.06);
+  --channeltextarea-background: rgba(var(--dark-layer1),0.05);
+  --bg-mod-subtle: rgba(var(--dark-layer1),0.1);
+
+  /*Flyout*/
+  --background-floating: var(--dark-flyout); 
+
+  /*Select or hover*/
+  --layer1: var(--dark-layer1);
+  --flyout: var(--dark-flyout);
+  --background-modifier-selected: rgba(var(--dark-select),0.07);
+  --background-modifier-active: rgba(var(--dark-select),0.07);
+  --background-modifier-hover: rgba(var(--dark-select),0.05);
+
+  /*variables*/
+  --accent: var(--dark-accent);
+  --accent-hovered: var(--dark-accent-hovered);
+  --accent-font: var(--dark-accent-font-color);
+  --button: var(--dark-button);
+  --button-border: var(--dark-button-border);
+  --button-font-color: var(--dark-button-font-color);
+  --dm-about: var(--dark-dm-about);
+  --background-accent: var(--dark-background-accent);
+} 
+.visual-refresh.theme-light{
+  --app-bg: var(--light-bg); 
+
+  /* Layer 1 */
+  --background-primary: rgba(var(--light-layer1),0.7); /* Activity Card Empty */
+  --background-surface-high: rgba(var(--light-layer1), 0.7); /* Activity Card */
+  --background-base-low: rgba(var(--light-layer1),0.7); /* Follow channel */
+  --background-surface-higher: rgba(var(--light-layer1), 0.4);
+  --background-secondary-alt: rgba(var(--light-layer1), 0.1);
+  --input-background: rgba(var(--light-layer1), 0.7); 
+  --background-secondary: rgba(var(--light-layer1), 0.7);
+  --background-tertiary: rgba(var(--light-layer1), 0.7);
+  --channeltextarea-background: rgba(var(--light-layer1), 0.4);
+  --bg-mod-subtle: rgb(208, 232, 255);
+
+  /* Flyout */
+  --background-floating: var(--light-flyout);
+
+  /* Select or hover */
+  --layer1: var(--light-layer1);
+  --flyout: var(--light-flyout);
+  --background-modifier-selected: rgba(var(--light-select), 0.07);
+  --background-modifier-active: rgba(var(--light-select), 0.07);
+  --background-modifier-hover: rgba(var(--light-select), 0.05);
+
+  /* Variables */
+  --accent: var(--light-accent);
+  --accent-hovered: var(--light-accent-hovered);
+  --accent-font: var(--light-accent-font-color);
+  --button: var(--light-button);
+  --button-border: var(--light-button-border);
+  --button-font-color: var(--light-button-font-color);
+  --dm-about: var(--light-dm-about);
+  --background-accent: var(--light-background-accent);
+}
+
+.app__160d8,
+.bg__960e4,
+.appMount__51fd7,
+.wrapper_ef3116,
+.visual-refresh .chat_f75fb0,
+.chatContent_f75fb0, /*Server Chat*/
+.themed__9293f, .nowPlayingColumn__133bf, /*DMs misc*/
+.visual-refresh .tabBody__133bf, 
+.container__7d20c,
+.container__133bf,
+#app-mount , .sidebar_c48ade /*Server Sidebar*/,
+.visual-refresh .clickable_f37cb1, .visual-refresh .hasBanner_f37cb1 .header_f37cb1, /*Server name*/
+:where(.visual-refresh) .themedBackground__74017, /*Server Textarea*/
+.panels_c48ade, .container__37e49 /*User Profile*/,
+.visual-refresh .sidebar_c48ade:after,
+.footer__214dc /*Discovery*/,
+.visual-refresh .contentRegionScroller__23e6b, .visual-refresh .sidebarRegionScroller__23e6b, .visual-refresh .standardSidebarView__23e6b, .contentRegion__23e6b, .layer__960e4 /*Settings*/, 
+.fieldList__1fed1,
+.children__9293f:after,
+.visual-refresh .wrapper_d852db, .visual-refresh .wrapper_fc8177 /* Skeleton loading */ {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+/*Server*/
+.visual-refresh .channelTextArea_f75fb0 {
+  background-color: var(--channeltextarea-background);
+}
+
+/*Buttons*/
+.lookFilled__201d5.colorBrand__201d5 {
+  background-color: var(--accent);
+  color: var(--accent-font);
+}
+.lookFilled__201d5.colorBrand__201d5:hover {
+  background-color: var(--accent-hovered);
+}
+.lookFilled__201d5.colorBrand__201d5:disabled{
+  background-color: var(--accent-hovered);
+}
+.lookFilled__201d5.colorPrimary__201d5, .lookFilled__201d5.colorPrimary__201d5:disabled {
+  background-color: var(--button);
+  color: var(--button-font-color);
+  outline: solid var(--button-border) 1.5px;
+}
+
+/*Toggle*/
+.container__87bf1.checked__87bf1{
+  background-color: var(--accent) !important;
+}
+.container__87bf1.checked__87bf1:hover{
+  background-color: var(--accent-hovered) !important;
+}
+
+/*Special Flyout*/
+.messagesPopoutWrap__45690,
+.container__2692d,
+.container_fc561d,
+.contentWrapper__08434,
+.header_fed6d3,
+.wrapper__4e6ce,
+.popout__3f413,
+.wrapper_c0e32c,
+.quickswitcher_ac6cb0,
+.vc-notification-root,
+.container_cc2dff, .reactors_cc2dff,
+.emojiRow_e7d73e .emojiAliasInput_e7d73e .emojiInput_e7d73e,
+.main__949ab,
+.streamPreview__6da2d {
+  background-color: var(--flyout);
+}
+
+/*Thread*/
+.container__01ae {
+  background-color: rgba(var(--layer1),0.05);
+}
+.floating__01ae2 {
+  backdrop-filter: brightness(0.65) blur(16px) saturate(1.5);
+}
+
+/*Misc*/
+.overlayBackground_c69a7b {
+  background-color: var(--dm-about);
+}
+.resizeHandle__01ae2 {
+  width: 0px;
+}
+.container__0f2e8 { /*Serverr Activity Status*/
+    background-color: rgba(var(--dark-layer1),0.05);
+    outline: solid 1px rgba(102, 43, 43, 0.1);
+}
+.scroller_ac6cb0 { /*Global search*/
+  border-radius: 5px;
+  margin-right: 0px;
+}
+.visual-refresh .form_f75fb0 {
+  margin-top: 0;
+}
+.jumpToPresentBar__0f481 {
+  padding-bottom: 0;
+}
+.lottieIcon__5eb9b.buttonIcon_e131a9 { /* VoiceChat Soundboard icon */
+    --__lottieIconColor: rgb(255, 255, 255) !important;
+}
+.container_e131a9 { /* VoiceChat border radius */
+    border-radius: 8px;
+}
+.title_c38106, .leading_c38106, .trailing_c38106, .winButtons_c38106 { /* Titlebar */
+  display: var(--title-bar-icon);
+}
+.visual-refresh .sidebarListRounded_c48ade { /* Remove sidebar backdrop-filter    WHO PUTS BACKDROP FILTER HERE?? */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.panels_c48ade, .container__37e49 { /*User Profile*/ 
+  background: var(--flyout) !important;
+}
+.visual-refresh .stackedBars__74017 { /* Reply Bar */
+  background: transparent;
+}
+
+/*meow*/
+:root {
+  --background-primary: transparent;
+  --custom-channel-members-bg: transparent;
+  --bg-base-primary: transparent;
+  --home-background: transparent;
+  --scrollbar-auto-track: transparent;
+  --deprecated-store-bg: transparent;
+}
+
+body{
+  background-color: var(--app-bg) !important;
+}
+.link__972a0 {
+  color: rgb(0, 0, 0);
+}
+
+.linkButtonIcon__972a0 {
+  color: rgb(252, 206, 231);
+  outline: 1px;
+  outline-color: black; 
+}
+.scroller__99e7c, .privateChannels__35e86
+{
+  background-color: rgb(212, 233, 253) !important;
+  stroke: rgb(0, 0, 0);
+  stroke-width: 0.7px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tutorialContainer__1f388 .svg_cc5dd2 {
+  width: 40px;
+  height: 40px;
+  background-image: url('https://media1.tenor.com/m/spIWXFBDzYcAAAAd/cinnamoroll-cinnamon-roll.gif');
+  border-radius: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: y-spin 12s ease-in-out infinite;
+}
+
+.tutorialContainer__1f388 .svg_cc5dd2 mask {
+  display: none;
+}
+.tutorialContainer__1f388 .svg_cc5dd2 .childWrapper__6e9f8 {
+  display: none;
+}
+
+.member_c8ffbb {
+  background: rgb(190, 220, 250);
+  }
+
+  .members_c8ffbb {
+    background: rgb(250, 225, 237);
+    }
+
+    .container__2637a {
+      background: rgb(212, 233, 255) !important;
+      }
+
+      
+      
+      .auto_d125d2::-webkit-scrollbar {
+        width: 50px; /* vertical scrollbar */
+      }
+      
+      .auto_d125d2::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      
+      .auto_d125d2::-webkit-scrollbar-thumb {
+        width: 50px;
+        height: 50px;
+        background: url('https://media.tenor.com/ZaUrPjXTqb8AAAAi/plane-cinnamoroll.gif') no-repeat center center;
+        background-size: 50px 50px;
+        border-radius: 50%;
+        border: 0; /* adjust if you want spacing */
+      }
+
+      
+      
+      
+      .container__34c2c {
+        background: rgb(212, 233, 255) !important;
+        }
+
+        .content__908e2 {
+          background: rgb(208, 187, 243) !important;
+          }
+
+          .barBase__0f481 {
+            background: rgb(227, 184, 247) !important;
+            }
+
+            .headerText_c19a55 {
+              -webkit-text-stroke: 0.1px rgb(0, 0, 0);
+          }
+
+          .container__01ae2 .chatContent_f75fb0 {
+            background: rgb(212, 233, 255) !important;
+        }
+
+        .container__9293f { 
+          background: rgb(207, 235, 253) !important;
+        }
+
+        .menu_c1e9c4 {
+          background:rgb(250, 225, 237) !important;
+          border: 1px solid black;
+          }
+
+
+
+          @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+a, abbr, acronym, address, applet, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+        .container_f369db {
+          background-color: rgb(252, 227, 246) !important;
+}
+
+
+
+/* Ultra-specific fallback for mention highlighting */
+[class*="mentioned"][class*="message"] {
+  background-color: #efd4ff !important;           /* Light pastel lavender */
+  border-left: 4px solid #eaabf7 !important;       /* Pastel pink border */
+  color: #fcabea !important;                      /* Soft pink text */
+  font-weight: 500;
+}
+
+/* Handles any sneaky orange border (like pseudo-elements) */
+[class*="mentioned"]::before {
+  border-left-color: #eaabf7 !important;
+}
+
+/* Mention background + pastel border */
+[class*="mentioned"][class*="message"] {
+  background-color: #efd4ff !important;
+  border-left: 4px solid #eaabf7 !important;
+  color: #fcabea !important;
+  font-weight: 500;
+  box-shadow: none !important;
+}
+
+/* Try to cancel any extra ::before or ::after borders */
+[class*="mentioned"]::before,
+[class*="mentioned"]::after {
+  border-left: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Reset inner reply padding + shadows if any */
+[class*="mentioned"] [class*="reply"],
+[class*="mentioned"] [class*="repliedMessage"] {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+/* Add a pastel blue heart before mention messages */
+[class*="mentioned"][class*="message"]::before {
+  content: "⭐";
+  margin-right: 8px;
+  font-size: 16px;
+  vertical-align: middle;
+  display: inline-block;
+  filter: drop-shadow(0 0 2px #5e01f3);
+}
+
+
+/* Style the mention text inside the message */
+.mention {
+  color: #fc58bd !important;      /* Soft pastel navy or pick your fave! */
+  font-weight: 600;              /* Optional: make it a bit bolder */
+  background: #eebffc !important; /* Removes Discord’s default background */
+  text-decoration: none !important;  /* No underline */
+}
+
+
+
+
+
+/* 🌸 Pink/Purple Glow Around Emoji, GIFs, and Stickers */
+[class*="emojiItem"],
+[class*="emojiItem"]:hover,
+[class*="imageContainer-"],
+[class*="imageContainer-"]:hover,
+[class*="emojiItemOuter-"],
+[class*="emojiItemOuter-"]:hover,
+[class*="stickerCard-"],
+[class*="stickerCard-"]:hover {
+  box-shadow: 0 0 8px 4px #dda2ff !important; /* Soft purple-pink glow */
+  border-radius: 8px !important;
+  transition: box-shadow 0.3s ease;
+}
+
+/* 🎨 Scoped Gradient Backgrounds (ONLY inside emoji/GIF/sticker picker) */
+div[class*="drawerSizingWrapper__"] div[class*="contentWrapper"],
+div[class*="drawerSizingWrapper__"] div[class*="scrollerBase"] {
+  background: linear-gradient(to right, #d6f0ff 0%, #ffd6ec 100%) !important;
+  border-radius: 12px !important;
+}
+
+/* Flip gradient: pastel pink (left) → pastel blue (right) */
+div[class*="drawerSizingWrapper__"] div.contentWrapper__08434,
+div[class*="drawerSizingWrapper__"] div.header_c0e32c,
+div[class*="drawerSizingWrapper__"] div.wrapper__14245.header_c656ac,
+div[class*="drawerSizingWrapper__"] div.categoryItemDefaultCategory_b9ee0c {
+  background: linear-gradient(to right, #fddde6, #dbeeff) !important;
+}
+
+/* 🌸 Match emoji picker gradient on Unicode emoji shortcut button */
+div.unicodeShortcut_b9ee0c {
+  background: linear-gradient(to right, #fddde6, #dbeeff) !important;
+  border-radius: 6px !important;
+  transition: background 0.3s ease;
+}
+
+/* Scroll area to match the vibe */
+div[class*="drawerSizingWrapper__"] div.scroller__affa7e {
+  background: linear-gradient(to right, #fddde6, #dbeeff) !important;
+}
+
+/* 💜 Light purple → white gradient for inspector/message bar */
+div[class*="drawerSizingWrapper__"] div.inspector_aeaaeb.inspector_c0e32c {
+  background: linear-gradient(to right, #e9d8fd, #ffffff) !important;
+}
+
+/* 🪄 Search bar at top of picker */
+div[class*="drawerSizingWrapper__"] div[class*="header_"] {
+  background: linear-gradient(to right, #ffccf9, #cceeff) !important;
+  border-radius: 12px !important;
+}
+
+/* ✨ Category Headers (like “Favorites”) */
+div[class*="drawerSizingWrapper__"] div[class*="wrapper__"][class*="header_"] {
+  background: linear-gradient(to right, #ffccf9, #cceeff) !important;
+  border-radius: 6px !important;
+}
+
+/* 🔍 Tenor search bar (GIFs) */
+div[class*="drawerSizingWrapper__"] div[class*="inspector_"] {
+  background: linear-gradient(to right, #ffccf9, #cceeff) !important;
+  border-radius: 12px !important;
+}
+
+/* 🌺 Sticker pack headers (e.g., “Hello Kitty Island Adventure”) */
+div[class*="drawerSizingWrapper__"] div[class*="packHeader_"] {
+  background: linear-gradient(to right, #ffccf9, #cceeff) !important;
+  border-radius: 6px !important;
+}
+
+
+
+
+
+
+
+/* Pretty pastel flower corners for folders and servers */
+.listItem__650eb,
+.folderIconWrapper__48112 {
+  position: relative;
+  z-index: 1;
+  border-radius: 16px;
+  overflow: visible !important;
+
+  background-image:
+    url("https://cdn.discordapp.com/attachments/743963233400127492/1361340667216793699/raw.png?ex=67fe66cb&is=67fd154b&hm=7fe79cc594a4106410290b1fb0659fc9dc8c53e5bd56e470900a6788116104e2&"), /* top-left (pink) */
+    url("https://cdn.discordapp.com/attachments/743963233400127492/1361339683866542341/raw.png?ex=67fe65e1&is=67fd1461&hm=b4725cce852a9ad705e850bf7c2a53636193004f36df60cfc921a6e8f05b09c3&"), /* top-right (blue) */
+    url("https://cdn.discordapp.com/attachments/743963233400127492/1361340667216793699/raw.png?ex=67fe66cb&is=67fd154b&hm=7fe79cc594a4106410290b1fb0659fc9dc8c53e5bd56e470900a6788116104e2&"), /* bottom-left (purple) */
+    url("https://cdn.discordapp.com/attachments/743963233400127492/1361339683866542341/raw.png?ex=67fe65e1&is=67fd1461&hm=b4725cce852a9ad705e850bf7c2a53636193004f36df60cfc921a6e8f05b09c3&"); /* bottom-right (pink/white) */
+  background-position:
+    top left,
+    top right,
+    bottom left,
+    bottom right;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+}
+
+
+/*Call background color*/
+div[class*="voiceCallWrapper_"] {
+  background-color: rgb(253, 205, 218); /* pastel pink */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* Voice/video bar background */
+div.buttonSection__1405b.experimentButtonSection__1405b {
+  background: rgb(190, 230, 253) !important; /* Soft pink/lavender glow */
+  border-radius: 10px !important;
+  padding: 4px !important;
+}
+
+/* Voice, video, screen, etc. buttons */
+button.staticButton_f1ceac,
+button.colorable_f1ceac {
+  background-color: #fcdcfc !important; /* Light pastel pink */
+  border-radius: 12px !important;
+  color: #ffffff !important; /* Dark text/icon for visibility */
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button.staticButton_f1ceac:hover,
+button.colorable_f1ceac:hover {
+  background-color: #ffffff !important;
+}
+
+.messagesWrapper__36d07 {
+  background: var(--chat-background-image) center/cover no-repeat fixed !important;
+  background-color: transparent !important;
+}
+:root {
+  --chat-background-image: url("https://cdn.discordapp.com/attachments/743963233400127492/1361369105181052998/raw.png?ex=67fe8147&is=67fd2fc7&hm=0d4c2f4cb8a91e97a99f1a876f150613e207e757051a0597e2575b9594e2f662")
+}
+
+
+
+.itemsContainer_ef3116 {
+  background-color: #f8e9f2 !important; /*left side color*/
+}
+
+.form_f75fb0 {
+  background-color: #d5e7ff !important; /*message chat color*/
+}
+
+/* Top bar potential classes */
+.container__11d72,
+.titleBar__710b0,
+.typeWindows_e41dab, /* top bar for Windows client */
+.wordmark__0d178,    /* Discord logo area */
+.platform-win .typeWindows_e41dab, /* platform specific */
+.withFrame__5e49e,
+.winButtonClose__6396d,
+.winButtonMinMax__72f36 {
+  background-color: #fdd2eb !important;
+}
+
+
+
+/* Top bar */
+.bar_c38106.systemBar_c38106.fixed_c38106.show_c38106 {
+  background-color: #fdecf4 !important; /* bright red */
+}
+
+/* Left sidebar */
+.sidebar__23e6b {
+  background-color: #fdecf4 !important;
+}
+
+
+/* Account settings panel */
+#my-account-tab.contentColumn__23e6b.contentColumnDefault__23e6b {
+  background-color: #fdecf4 !important;
+}
+
+
+/* Black text for various elements with light backgrounds */
+.defaultColor__4bd52,
+.subtext_c1e9c4,
+.item__0c135,
+.label_c1e9c4 {
+  color: black !important;
+}
+
+
+.title_c38106 {
+  background-color: #fdecf4 !important; /* pastel pink */
+  color: black !important; /* ensure the text is readable */
+}
+
+.bar_c38106 {
+  background-color: #fdecf4 !important;
+  color: black !important;
+}
+
+
+
+
+
+
+/* Avatar base setup */
+.border_f910d0 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative image frame always on top center */
+.border_f910d0::before {
+  content: "";
+  position: absolute;
+  top: -135px; /* Adjust this to fit above the avatar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 70px;
+  background-image: url("https://cdn.discordapp.com/attachments/743963233400127492/1361600155232501810/raw.png?ex=67ff5876&is=67fe06f6&hm=f77f8665d01a4c02472e676161851cf6c3c9ea75721456b8c90e4fd05fab543e&");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 2;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Add bounce animation on speaking */
+.border_f910d0.speaking_f910d0::before {
+  animation: jumpSpeak 0.4s ease infinite;
+}
+
+/* Jump animation */
+@keyframes jumpSpeak {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
