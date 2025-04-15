@@ -23,6 +23,7 @@ Save and enjoy your aesthetic pastel Discord ✨
 
 🧁 Customization
 You can adjust the pastel colors or glow effects by editing the hex codes inside theme.css.
+Right now the theme is for light mode, future customization will change that and update the theme<3
 
 Flower border images can be swapped for your own by replacing the url(====) values.
 
