@@ -1,24 +1,24 @@
 :root {
   /*Dark mode*/
-  --dark-bg: transparent;
-  --dark-layer1: 255,255,255;
-  --dark-flyout: rgb(30,30,30);
+ 
+  --dark-layer1: 141, 208, 247;
+  --dark-flyout: rgb(252, 224, 231);
   --dark-select: 255,255,255;
   --dark-accent: rgb(76, 194, 255);
   --dark-accent-hovered: rgb(65, 163, 214); /*also disabled button*/
   --dark-accent-font-color: black;
-  --dark-button: rgb(45,45,45);
+  --dark-button: rgb(190, 220, 250);
   --dark-button-border: rgb(60, 60, 60);
   --dark-button-font-color: white;
-  --dark-dm-about: rgba(0,0,0,0.4);
-  --dark-background-accent: rgba(50,50,50,0.9);
+  --dark-dm-about: rgba(255, 255, 255);
+  --dark-background-accent: rgba(255, 255, 255);
 
   /*Light mode*/
-  --light-bg: rgb(250, 220, 230);
-  --light-layer1: 141, 208, 247;
+
+  --light-layer1: rgb(141, 208, 247);
   --light-flyout: rgb(252, 224, 231);
   --light-select: 0,0,0;
-  --light-accent: rgb(255, 199, 214);
+  --light-accent: rgb(253, 205, 218);
   --light-accent-hovered: rgb(228, 212, 255); /*also disabled button*/
   --light-accent-font-color: rgb(0, 0, 0);
   --light-button: rgb(190, 220, 250);
@@ -445,6 +445,13 @@ div[class*="drawerSizingWrapper__"] div.categoryItemDefaultCategory_b9ee0c {
   background: linear-gradient(to right, #fddde6, #dbeeff) !important;
 }
 
+/* 🌸 Match emoji picker gradient on Unicode emoji shortcut button */
+div.unicodeShortcut_b9ee0c {
+  background: linear-gradient(to right, #fddde6, #dbeeff) !important;
+  border-radius: 6px !important;
+  transition: background 0.3s ease;
+}
+
 /* Scroll area to match the vibe */
 div[class*="drawerSizingWrapper__"] div.scroller__affa7e {
   background: linear-gradient(to right, #fddde6, #dbeeff) !important;
@@ -507,14 +514,14 @@ div[class*="drawerSizingWrapper__"] div[class*="packHeader_"] {
   background-repeat: no-repeat;
 }
 
-/* ☁️ Dreamy pastel cloud background for call screen */
+
+/*Call background color*/
 div[class*="voiceCallWrapper_"] {
-  background-image: url("https://cdn.discordapp.com/attachments/743963233400127492/1361369105181052998/raw.png?ex=67fe8147&is=67fd2fc7&hm=0d4c2f4cb8a91e97a99f1a876f150613e207e757051a0597e2575b9594e2f662&"); /* pastel pink, blue, purple clouds */
+  background-color: rgb(253, 205, 218); /* pastel pink */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
 
 
 /* Voice/video bar background */
@@ -537,4 +544,95 @@ button.colorable_f1ceac {
 button.staticButton_f1ceac:hover,
 button.colorable_f1ceac:hover {
   background-color: #ffffff !important;
+}
+
+.messagesWrapper__36d07 {
+  background: var(--chat-background-image) center/cover no-repeat fixed !important;
+  background-color: transparent !important;
+}
+:root {
+  --chat-background-image: url("https://cdn.discordapp.com/attachments/743963233400127492/1361369105181052998/raw.png?ex=67fe8147&is=67fd2fc7&hm=0d4c2f4cb8a91e97a99f1a876f150613e207e757051a0597e2575b9594e2f662")
+}
+
+
+
+.itemsContainer_ef3116 {
+  background-color: #f8e9f2 !important; /*left side color*/
+}
+
+.form_f75fb0 {
+  background-color: #d5e7ff !important; /*message chat color*/
+}
+
+/* Top bar potential classes */
+.container__11d72,
+.titleBar__710b0,
+.typeWindows_e41dab, /* top bar for Windows client */
+.wordmark__0d178,    /* Discord logo area */
+.platform-win .typeWindows_e41dab, /* platform specific */
+.withFrame__5e49e,
+.winButtonClose__6396d,
+.winButtonMinMax__72f36 {
+  background-color: #fdd2eb !important;
+}
+
+
+
+/* Top bar */
+.bar_c38106.systemBar_c38106.fixed_c38106.show_c38106 {
+  background-color: #fdecf4 !important; /* bright red */
+}
+
+/* Left sidebar */
+.sidebar__23e6b {
+  background-color: #fdecf4 !important;
+}
+
+
+/* Account settings panel */
+#my-account-tab.contentColumn__23e6b.contentColumnDefault__23e6b {
+  background-color: #fdecf4 !important;
+}
+
+
+/* Black text for various elements with light backgrounds */
+.defaultColor__4bd52,
+.subtext_c1e9c4,
+.item__0c135,
+.label_c1e9c4 {
+  color: black !important;
+}
+
+
+.title_c38106 {
+  background-color: #fdecf4 !important; /* pastel pink */
+  color: black !important; /* ensure the text is readable */
+}
+
+.bar_c38106 {
+  background-color: #fdecf4 !important;
+  color: black !important;
+}
+
+
+
+.border_f910d0 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Decorative frame above avatar */
+.border_f910d0::before {
+  content: "";
+  position: absolute;
+  top: -135px; /* Adjust based on frame height */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;  /* Adjust to match frame size */
+  height: 70px;
+  background-image: url("https://cdn.discordapp.com/attachments/743963233400127492/1361600155232501810/raw.png?ex=67ff5876&is=67fe06f6&hm=f77f8665d01a4c02472e676161851cf6c3c9ea75721456b8c90e4fd05fab543e&");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 2;
 }
