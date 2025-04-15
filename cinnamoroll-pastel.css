@@ -656,3 +656,143 @@ button.colorable_f1ceac:hover {
     transform: translateX(-50%) translateY(-20px);
   }
 }
+
+
+
+/* === General body styling === */
+.theme-light {
+  --background-primary: #ffe1f0;
+  --background-secondary: #ffcfe7;
+  --background-secondary-alt: #ffcfe7;
+  --background-tertiary: #ffcfe7;
+  --channeltextarea-background: #ffe1f0;
+  --background-floating: #ffe1f0;
+  --background-modifier-hover: #fdd0e5;
+  --background-modifier-selected: #fbb8d2;
+}
+
+/* === Left Friends Sidebar === */
+.container__0a6a9, 
+.container__7e23c, 
+.scroller__1f96e {
+  background-color: #d4ecff !important; /* pastel blue */
+}
+
+/* === Main Friends List Panel (Online, All, Add Friend) === */
+.peopleColumn__133bf {
+  background: linear-gradient(to bottom, #fddfea, #d0eefd) !important;
+}
+
+/* === Friends Scroll area === */
+.scroller__7d20c.thin_d125d2.scrollerBase_d125d2 {
+  background-color: #ffeaf4 !important; /* pastel pink scroll area */
+}
+
+/* === Active Now Right Panel === */
+.wrapper__4e264,
+.nowPlayingColumn_f5023f {
+  background-color: #ffe4f2 !important; /* pastel pink */
+}
+
+/* === Extra Cleanup for Inner Boxes in Right Panel === */
+.wrapper__4e264 .scroller__7d20c {
+  background-color: #fcdeed !important;
+}
+
+
+
+
+/* ========== REFINED PASTEL BLUE PANELS ========== */
+
+/* Only apply pastel blue to the Friends tab list */
+.section__62b44 .scroller__7d20c,
+.container__3673d,
+.peopleList_d2f527,
+.nowPlayingColumn_f5023f {
+    background-color: #daeffa !important;
+}
+
+/* Only the Message Requests panel */
+.container__3a30a .scroller__7d20c {
+    background-color: #e3f5ff !important;
+}
+
+/* Add Friend input area */
+.addFriendInputWrapper__72ba7 {
+    background-color: #e2f4fd !important;
+}
+
+/* ========== FIX PROFILE CARD BEING BLUE ========== */
+
+/* Outer shell cleanup */
+.userProfileOuter__35e59,
+.userProfileOuterThemed__1fbd7 {
+    background: none !important;
+}
+
+/* Restore the white part */
+.userProfileInner__8ff35 {
+    background-color: var(--background-floating) !important;
+    border-radius: 8px !important;
+}
+
+/* Restore bottom details area */
+.userProfileOverlayBackground__50719,
+.overlayBackground__345c9 {
+    background-color: var(--background-secondary) !important;
+}
+
+/* Ensure it's clean for light + dark themes */
+.theme-light .userProfileInner__8ff35,
+.theme-dark .userProfileInner__8ff35 {
+    background-color: var(--background-floating) !important;
+}
+
+/* Fix Message button style */
+.button_f73214 {
+    background-color: #ebf8ff !important;
+    color: #000 !important;
+    border: 1px solid #d1ecfd !important;
+}
+
+/* ========== LEFT SIDEBAR TWEAKS ========== */
+
+.wrapper__612a5:hover,
+.listItem_fa7b36[aria-label="Message Requests"] {
+    background-color: #d8f2ff !important;
+}
+
+/* ========== MESSAGE REQUESTS + SPAM: PASTEL GRADIENT ========== */
+
+.list_dcc822,
+.content_f75fb0 {
+    background: linear-gradient(135deg, #cfeeff, #ffd6f9) !important;
+}
+
+
+/* FORCE background to pastel purple and text to black for Add Friend */
+div[class*="addFriend"][class*="item"] {
+  background-color: #eedbff !important; /* pastel purple */
+  color: #000 !important;
+}
+
+/* Make sure text inside stays black */
+div[class*="addFriend"][class*="item"] span {
+  color: #2e2d2d !important;
+}
+
+/* Optional: remove existing background filters or blend modes */
+div[class*="addFriend"][class*="item"] {
+  backdrop-filter: none !important;
+  background-blend-mode: normal !important;
+}
+
+
+.nav__551b0 {
+  background: linear-gradient(to bottom, #ffe0ec, #cceeff) !important;
+}
+
+
+.header__551b0 {
+  background: linear-gradient(to bottom, #ffc8dd, #cceeff) !important;
+}
